@@ -1,0 +1,30 @@
+#ifndef __LIBRARY_MANAGEMENT_SYSTEM_H__
+#define __LIBRARY_MANAGEMENT_SYSTEM_H__
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+typedef struct library
+{
+    int b_id;
+    char b_name[20];
+    char a_name[20];
+}book;
+
+typedef enum test_values {
+    pass = 1,
+    fail = 0
+}test_values;
+
+test_values search(int id);
+
+test_values add(int id,char name[],char author[]);
+
+test_values delete(int id);
+
+test_values issue(int id);
+
+test_values view(void);
+
+#endif
